@@ -1,8 +1,9 @@
 /* LAYOUT */
+
 main {
   position: relative;
   width: 100rem;
-  height: 60rem;
+  height: 50rem;
   background-color: rgba($color-white, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -35,7 +36,7 @@ main {
 .score {
   font-size: 8rem;
   font-weight: 300;
-  color: $color-secondary-light;
+  color: $color-tertiary-light;
   margin-bottom: auto;
 }
 
@@ -54,7 +55,7 @@ main {
 }
 
 .current {
-  background-color: $color-secondary-light;
+  background-color: $color-tertiary-light;
   opacity: 0.8;
   border-radius: 9px;
   color: $color-white;
