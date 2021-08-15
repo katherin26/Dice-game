@@ -35,6 +35,9 @@ const init = function () {
   current1El.textContent = 0;
 
   diceEl.classList.add('hidden'); // esto esconde el dado.
+  document.querySelector(`#winner--0`).classList.add('hidden');
+  document.querySelector(`#winner--1`).classList.add('hidden');
+
   player0El.classList.remove('player--winner');
   player1El.classList.remove('player--winner');
   player0El.classList.add('player--active'); //se deja add porque 0 siempre inicia.
@@ -92,12 +95,18 @@ btnHold.addEventListener('click', function () {
       //FInish the game .
       playing = false;
       diceEl.classList.add('hidden');
+
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add('player--winner');
+
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+
+      document
+        .querySelector(`#winner--${activePlayer}`)
+        .classList.remove('hidden');
     } else {
       //Switch to the next player.
       switchPlayer();
@@ -106,3 +115,7 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', init); // se pone init en vez de function();
+
+/* document
+        .querySelector(`#winner--${activePlayer}`)
+        .classList.remove('hidden'); */

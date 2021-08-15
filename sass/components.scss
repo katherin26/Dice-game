@@ -43,9 +43,11 @@ main {
 .player--active {
   background-color: rgba($color-white, 0.4);
 }
+
 .player--active .name {
   font-weight: 700;
 }
+
 .player--active .score {
   font-weight: 400;
 }
@@ -60,7 +62,7 @@ main {
   border-radius: 9px;
   color: $color-white;
   width: 65%;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   transition: all 0.75s;
 }
@@ -88,12 +90,13 @@ main {
 }
 
 .player--winner {
-  background-color: #0297e7a9;
+  // background-color: #0297e7a9;
+  background-color: rgba($color-tertiary-dark, 0.2);
 }
 
 .player--winner .name {
   font-weight: 700;
-  color: $color-secondary-light;
+  color: $color-winner-letter;
 }
 
 .hidden {
